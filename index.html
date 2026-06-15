@@ -1,50 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog</title>
-        <style>
-            header{
-                background-color: #086840;
-                color: #FFFFFF;
-                text-align: center;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 10px;
-            }
-            main {
-                background-color: #FFFFFF;;
-                color: #086840;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 10px;
-                display: flex;
-            }
-            img{
-                width: 150px;
-                height: 150px;
-            }
-            .artigo-autor{
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        header {
+            background-color: #086840;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            ;
+            color: #086840;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
     <header>
-            <h1>Receita da Vez</h1>
+        <h1>Receita da Vez</h1>
     </header>
     <main>
-        <img src="receita.jpg" alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
+        <img src="receita.jpg"
+            alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
         <div>
-            
+
             <h2>Meu primeiro post</h2>
             <p class="artigo-autor">Por: Maria E. Provin</p>
             <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar receitas que estão viralizando no momento.</p>
-            <button>
-                
-            </button>
+            <button>👍 <samp>0</samp></button>
+            <button>👎 <samp>0</samp></button>
         </div>
-        </main>
-    </body>
+        <img src="receita.jpg"
+            alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
+        <div>
+
+            <h2>Meu primeiro post</h2>
+            <p class="artigo-autor">Por: Maria E. Provin</p>
+            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar receitas que estão viralizando no momento.</p>
+            <button>👍 <samp>0</samp></button>
+            <button>👎 <samp>0</samp></button>
+        </div>
+
+
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("samp");
+            texto.textContent++;
+        }
+    }
+    )
+
+
+</script>
+
 </html>
