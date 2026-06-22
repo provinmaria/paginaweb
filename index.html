@@ -22,6 +22,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 10px;
+        }
+        article{
             display: flex;
         }
 
@@ -41,27 +43,55 @@
         <h1>Receita da Vez</h1>
     </header>
     <main>
-        <img src="receita.jpg"
-            alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
-        <div>
+        <article>
+            <img src="receita.jpg"
+                alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
+            <div>
+    
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Maria E. Provin</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar receitas que estão viralizando no momento.</p>
+                <button>👍 <samp>0</samp></button>
+                <button>👎 <samp>0</samp></button>
+            </div>
+        </article>
+        <article>
 
-            <h2>Meu primeiro post</h2>
-            <p class="artigo-autor">Por: Maria E. Provin</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar receitas que estão viralizando no momento.</p>
-            <button>👍 <samp>0</samp></button>
-            <button>👎 <samp>0</samp></button>
-        </div>
-        <img src="receita.jpg"
-            alt="Logotipo circular do blog de culinária 'Receita da Vez', em estilo vetorial minimalista. O design apresenta um círculo branco contornado em verde escuro (#086840), com os dizeres 'Receita da Vez' acompanhando a curvatura superior e inferior da borda em fonte artesanal. No centro, há ilustrações de uma colher de pau, um fouet e uma espátula na cor verde escuro.">
-        <div>
+            <div>
+                <h2>Salada de macarrão crocante</h2>
+                <p class="artigo-autor">Ingredientes da salada</p>
+                <p>2 xícaras de chá de alface americana picada (1 cabeça pequena)</p>
+                <p>1 xícara de chá de tomate-cereja cortado ao meio</p>   
+                <p>½ cebola roxa picada</p>
+                <p>½ pepino ralado</p>
+                <p>Salsinha picada a gosto</p>
+                <p class="artigo-autor">Ingredientes do macarrão</p>
+                <p>200 g de macarrão gravata (farfalle)</p>
+                <p>1 colher (sopa) de azeite</p>   
+                <p>1 colher (chá) de páprica doce</p>
+                <p>½ colher (chá) de alho em pó ou 1 dente de alho bem picado</p>
+                <p>Sal e pimenta-do-reino a gosto</p>
+                <p class="artigo-autor">Ingredientes do molho</p>
+                <p>4 colheres (sopa) de creme de leite</p>
+                <p>1 colher (sopa) de suco de limão</p>   
+                <p>1 colher (sopa) de água</p>
+                <p>1 colher (sopa) de mostarda</p>
+                <p>Sal e pimenta-do-reino a gosto</p>
 
-            <h2>Meu primeiro post</h2>
-            <p class="artigo-autor">Por: Maria E. Provin</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar receitas que estão viralizando no momento.</p>
-            <button>👍 <samp>0</samp></button>
-            <button>👎 <samp>0</samp></button>
-        </div>
+                <p class="artigo-autor">Modo de preparo</p>
+                <p>1. Cozinhe o macarrão em água com sal até ficar al dente.</p>
+                <p>2. Coloque o macarrão em uma tigela e misture com: azeite, páprica, alho, sal e pimenta. Mexa bem para envolver todos os pedaços.</p>   
+                <p>3. Coloque o macarrão na air fryer a 200 °C por cerca de 8 minutos, até ficar dourado e crocante.</p>
+                <p>4. Em uma tigela grande misture: alface, tomate, cebola roxa, pepino e a salsinha.</p>
+                <p>5. Misture a maionese, o limão, a água, a mostarda, sal e pimenta até formar um molho cremoso.</p>
+                <p>6. Coloque a salada em uma tigela, espalhe o macarrão crocante por cima e finalize com o molho, e misture bem.</p>
+                <p>7. Sirva imediatamente para manter o macarrão bem crocante.</p>
 
+
+                <button>👍 <samp>0</samp></button>
+                <button>👎 <samp>0</samp></button>
+            </div>
+        </article>
 
     </main>
 </body>
@@ -69,12 +99,19 @@
     const botoes = document.querySelectorAll("button");
 
     botoes.forEach(function (botao) {
+        let curtiu = false;
         botao.addEventListener("click", botaoClicado);
 
         function botaoClicado() {
             console.log("fui clicado");
             let texto = botao.querySelector("samp");
-            texto.textContent++;
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
         }
     }
     )
