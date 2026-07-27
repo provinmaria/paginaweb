@@ -26,6 +26,8 @@
             </div>
         </article>
         <article>
+            <img src="maria.webp"
+                alt="imagem de uma salada.">
 
             <div>
                 <h2>Salada de macarrão crocante</h2>
@@ -63,30 +65,39 @@
             </div>
         </article>
 
+        <article>
+            <img src="beatriz.jpg"
+                alt="Imagem de uma pedaço de pavê.">
+            <div>
+                <h2>Pavê de Chocolate sem Lactose</h2>
+                <p class="artigo-autor">Ingredientes</p>
+                <p>3 colheres (sopa) de Leite em pó Zero Lactose</p>
+                <p>1 xícara e meia (chá) de água</p>   
+                <p>1 caixinha de Leite Condensado Zero Lactose</p>
+                <p>3 colheres (sopa) de Chocolate em Pó 50%</p>
+                <p>1 colher (sopa) de amido de milho</p>
+                <p>1 lata de Creme de Leite Zero Lactose</p>
+                <p>1 pacote de biscoito tipo champanhe</p>
+                <p>Granulado sem lactose para decorar</p>
+
+                <p class="artigo-autor">Modo de preparo</p>
+                <p>1. Em um recipiente, dilua o Leite em pó na água e reserve.</p>
+                <p>2. Em uma panela, misture o Leite Condensado, metade do Leite em pó, o Chocolate em Pó 50% e o amido de milho e leve ao fogo baixo, mexendo sempre até obter uma mistura cremosa.</p>   
+                <p>3. Retire do fogo e junte o Creme de Leite. Reserve.</p>
+                <p>4. Umedeça os biscoitos no Leite em pó restante e coloque-os, um ao lado do outro em um recipiente refratário retangular (16 x 26 cm).</p>
+                <p>5. Cubra com um pouco do Creme de Chocolate. Coloque outra camada de biscoitos umedecidos e outra de Creme de Chocolate.</p>
+                <p>6. Decore com o granulado e polvilhe o açúcar de confeiteiro</p>
+                <p>7. Leve à geladeira por cerca de 6 horas e sirva a seguir.</p>
+
+
+                <button>👍 <samp>0</samp></button>
+                <button>👎 <samp>0</samp></button>
+            </div>
+        </article>
+
     </main>
+
+    <script src="script.js"></script>
 </body>
-<script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function (botao) {
-        let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("samp");
-            if (curtiu === false){
-                texto.textContent++;
-                curtiu = true;
-            } else{
-                texto.textContent--;
-                curtiu = false;
-            }
-        }
-    }
-    )
-
-
-</script>
 
 </html>
